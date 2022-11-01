@@ -1,0 +1,267 @@
+*,
+*::after,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #333;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.main .calc {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s;
+}
+.main .calc--dark {
+  background-color: black;
+}
+.main .calc__top {
+  margin-top: 50px;
+  padding: 0 2em;
+  border-radius: 10px;
+}
+.main .calc__bottom {
+  position: relative;
+  padding: 5em 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+}
+.main .calc__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main .calc__btn {
+  color: rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: rgb(187, 187, 187);
+  margin: 10px 5px;
+  padding: 1.2em;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 50px;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s background-color 0.7s;
+  transition: -webkit-transform 0.3s background-color 0.7s;
+  transition: transform 0.3s background-color 0.7s;
+  transition: transform 0.3s background-color 0.7s, -webkit-transform 0.3s background-color 0.7s;
+}
+.main .calc__btn--dark {
+  color: #fff;
+  background-color: rgb(49, 49, 49);
+}
+.main .calc__btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.main .calc__btn--color1 {
+  color: #fff;
+  background-color: rgb(10, 205, 255);
+}
+.main .calc__btn--color1--dark {
+  background-color: #fb9427;
+}
+.main .calc__btn--color2 {
+  color: #fff;
+  background-color: rgb(2, 122, 254);
+}
+.main .calc__btn--color2--dark {
+  background-color: #9b5102;
+}
+.main .calc__result {
+  font-size: 2rem;
+  padding: 0.4em 0;
+  width: 100%;
+  text-align: right;
+  -webkit-transition: background-color 0.7s;
+  transition: background-color 0.7s;
+}
+.main .calc__result--dark {
+  color: #fff;
+  background-color: black;
+}
+.main .calc__color-change {
+  color: rgb(0, 0, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: rgb(187, 187, 187);
+  margin: 10px 5px;
+  padding: 1.2em;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  width: 50px;
+  cursor: pointer;
+  color: rgb(2, 122, 254);
+}
+.main .color {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(49, 49, 49);
+  height: 200px;
+  width: 70%;
+  z-index: 100;
+  border-radius: 0 10px 0 10px;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.main .color--active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.main .color__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.2em 0.4em;
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+}
+.main .color__column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main .color__box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.main .color__theme-btn {
+  position: relative;
+  padding: 0.4em;
+  min-width: 100px;
+  border: none;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+  color: #fff;
+}
+.main .color__theme-btn--dark {
+  color: #9b5102;
+  background-color: rgb(49, 49, 49);
+}
+.main .color__theme-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.4s;
+  transition: opacity 0.6s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.6s;
+  transition: transform 0.4s, opacity 0.6s, -webkit-transform 0.4s;
+}
+.main .color__theme-btn:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+.main .color__color-preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #fb9427;
+  font-size: 1.5rem;
+  padding: 1.2em;
+  text-shadow: 0 0 5px black;
+}
+.main .color__color-preview--second {
+  color: #fff;
+  background-color: rgb(10, 205, 255);
+}/*# sourceMappingURL=main.css.map */
